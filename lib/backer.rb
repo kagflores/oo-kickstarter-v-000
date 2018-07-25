@@ -11,8 +11,8 @@ class Backer
   def back_project(project)
     @backed_projects << project
     new_backer = @name
-    binding.pry
-    #Project.add_backer << new_backer
+    #binding.pry
+    Project.add_backer << new_backer
     #self.backed_projects = Project.find_or_create(project)
     #self.find_by_project
   end
