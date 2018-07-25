@@ -9,23 +9,23 @@ class Project
 
   def add_backer(backer)
     @backers << backer
-    self.backers = Backer.find_or_create(backer)
+    #self.backers = Backer.find_or_create(backer)
   end
 
-  def self.find_or_create(title)
-    if @@all.any?{|n| n.title = title}
-    else
-      new_title = self.new(title)
-      @@all << new_title
-    end
-  end
+#  def self.find_or_create(title)
+#    if @@all.any?{|n| n.title = title}
+#    else
+#      new_title = self.new(title)
+#      @@all << new_title
+#    end
+#  end
 
-  def self.all
-    @@all
-  end
+#  def self.all
+#    @@all
+#  end
 
-  def save
-    @@all << self
-  end
+#  def save
+#    @@all << self
+#  end
 
 end
