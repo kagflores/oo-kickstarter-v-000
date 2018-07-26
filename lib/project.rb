@@ -9,6 +9,7 @@ class Project
 
   def add_backer(backer)
     @backers << backer
+    Backer.backed_projects << self
     #self.backers = Backer.find_or_create(backer)
   end
 
