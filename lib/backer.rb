@@ -10,12 +10,13 @@ class Backer
 
   def back_project(project)
     @backed_projects << project
-    Project.backers << self unless Project.backers.include?(self)
+    project.backers << self unless Project.backers.include?(self)
     #binding.pry
     #Project.add_backer << new_backer
     #self.backed_projects = Project.find_or_create(project)
     #self.find_by_project
   end
+
 
 #  def self.find_or_create(name)
 #    if @@all.any?{|n| n.name = name}
